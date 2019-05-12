@@ -1,9 +1,9 @@
-title: Cayman Blog Theme
-description: Cayman Blog Theme is a clean, responsive blogging theme for Jekyll and Gitlab/GitHub Pages.
+title: Exasol Secrets
+description: Blog about hidden capabilities of analytical DBMS Exasol
 show_downloads: true
 
-baseurl: "/cayman-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "https://lorepirri.github.io" # change this to the base hostname & protocol for your site
+baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "https://wildraid.github.io" # change this to the base hostname & protocol for your site
 
 google_analytics:
 # cayman-blog date format
@@ -14,13 +14,12 @@ cayman-blog:
 theme: # leave it empty
 
 # social
-author: "Lore Pirri"
+author: "Vitaly Markov"
 image: /thumbnail-jumbo.png
-twitter:
-  username: lorepirri
 
 plugins:
   - jekyll-target-blank
 
 target-blank:
     rel: nofollow
+

@@ -19,13 +19,7 @@ layout: default
     {{ content }}
   </div>
 
-<script src="https://utteranc.es/client.js"
-        repo="wildraid/wildraid.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+  {% include talkyard-comments.html %}
 
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}

@@ -1,5 +1,5 @@
 title: Exasol Secrets
-description: Blog about hidden capabilities of analytical DBMS Exasol
+description: A little blog about efficiency and hidden features of analytical DBMS Exasol
 show_downloads: true
 
 baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
@@ -15,7 +15,6 @@ theme: # leave it empty
 
 # social
 author: "Vitaly Markov"
-image: /thumbnail-jumbo.png
 
 plugins:
   - jekyll-target-blank
@@ -23,6 +22,11 @@ plugins:
 target-blank:
     rel: nofollow
 
+header_pages:
+  - about.md
+
+# gems:
+#  - jekyll-seo-tag
+
 talkyard_server_url: https://comments-for-wildraid-github-io.talkyard.net
 talkyard_script_url: https://c1.ty-cdn.net/-/talkyard-comments.min.js
-

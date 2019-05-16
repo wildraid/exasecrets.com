@@ -5,3 +5,5 @@ Gemfile.lock
 *.gem
 vendor/*
 .jekyll-metadata
+.idea
+.DS_Store

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="theme-color" content="#157878">
 
-    {% if page.title %}
+    {% if page.title and page.layout == 'post' %}
       {% assign page-title = page.title | escape %}
     {% else %}
       {% assign page-title = site.title | escape %}

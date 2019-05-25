@@ -3,7 +3,7 @@ description: A little blog about efficiency and hidden features of analytical DB
 show_downloads: true
 
 baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "https://wildraid.github.io" # change this to the base hostname & protocol for your site
+url: "https://exasecrets.com" # change this to the base hostname & protocol for your site
 
 google_analytics:
 # cayman-blog date format

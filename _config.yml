@@ -23,6 +23,7 @@ target-blank:
     rel: nofollow
 
 header_pages:
+  - updates.md
   - about.md
 
 # gems:

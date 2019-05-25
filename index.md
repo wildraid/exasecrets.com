@@ -4,7 +4,7 @@ layout: home
 
 ## Table of contents
 
-* How to prepare test environment?
+* [How to prepare test environment?](/2019/05/25/test-environment.html)
 
 #### ExaJLoad
 

@@ -1,3 +1,8 @@
+---
+layout: post
+title: "How to prepare test environment?"
+---
+
 ## Exasol in virtual environment
 
 It's a good idea to setup a separate Exasol instance for tests in virtual environment. You may run it on your local laptop, remote server or in the cloud.

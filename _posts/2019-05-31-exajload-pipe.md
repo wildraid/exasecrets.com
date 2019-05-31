@@ -3,9 +3,11 @@ layout: post
 title: "How to import data from pipe using exajload?"
 ---
 
-Official examples of `exajload` utility only mention IMPORT from various files. However, it is is possible to IMPORT not only from files, but also from standard input `STDIN`.
+Official documentation of `exajload` utility only mention IMPORT from various files. However, it is possible to IMPORT not only from files, but also from standard input `STDIN`.
 
-It is might be useful while building complex ETL pipelines and applying dynamic transformations before IMPORT.
+It might be useful while building complex ETL pipelines and applying dynamic transformations before IMPORT.
+
+### Example
 
 1. Create table:
     ```sql
@@ -21,12 +23,17 @@ It is might be useful while building complex ETL pipelines and applying dynamic 
         status          VARCHAR(50)
     );
     ```
-2. Download Exasol JDBC driver from [Download section](https://www.exasol.com/portal/display/DOWNLOAD/) and extract it to get exajload.
+2. Download Exasol JDBC driver from [Download section](https://www.exasol.com/portal/display/DOWNLOAD/) and extract it to get `exajload` executable.
 3. Download file with test data: [users.csv](/assets/data/users.csv)
 4. Import data using following command:
 
 ```
-cat users.csv | ./exajload -c 'localhost:8563' -u 'SYS' -P 'exasol' -s 'EXASECRETS' -sql 'IMPORT INTO users FROM LOCAL CSV FILE '\''/dev/stdin'\'' ROW SEPARATOR = '\''LF'\''
+cat users.csv | ./exajload \
+-c 'localhost:8563' \
+-u 'SYS' \
+-P 'exasol' \
+-s 'EXASECRETS' \
+-sql 'IMPORT INTO users FROM LOCAL CSV FILE '\''/dev/stdin'\'' ROW SEPARATOR = '\''LF'\''
 ```
 
 You may use `/dev/stdin` special value to read from `STDIN` instead of normal file.
@@ -46,5 +53,12 @@ Now you have a pseudo-file called `stdin.gz`, which can be used as valid FILE va
 Let's try to compress data file on the fly and IMPORT it such state:
 
 ```
-gzip users.csv | | ./exajload -c 'localhost:8563' -u 'SYS' -P 'exasol' -s 'EXASECRETS' -sql 'IMPORT INTO users FROM LOCAL CSV FILE '\''stdin.gz'\'' ROW SEPARATOR = '\''LF'\''
+gzip users.csv | | ./exajload \
+-c 'localhost:8563' \
+-u 'SYS' \
+-P 'exasol' \
+-s 'EXASECRETS' \
+-sql 'IMPORT INTO users FROM LOCAL CSV FILE '\''stdin.gz'\'' ROW SEPARATOR = '\''LF'\''
 ```
+
+This technique might help you to reduce the amount of traffic transferred over network.

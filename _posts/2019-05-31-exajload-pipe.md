@@ -51,7 +51,7 @@ ln -s /dev/stdin stdin.gz
 
 Now you have a pseudo-file called `stdin.gz`, which can be used as valid FILE value for exajload.
 
-Let's try to compress data file on the fly and IMPORT it such state:
+Let's try to compress data file on the fly and IMPORT it as gzip-encoded stream:
 
 ```
 gzip -c users.csv | ./exajload \
@@ -63,4 +63,4 @@ gzip -c users.csv | ./exajload \
 -sql 'IMPORT INTO users FROM LOCAL CSV FILE '\''stdin.gz'\'' ROW SEPARATOR = '\''LF'\'''
 ```
 
-This technique might help you to reduce the amount of traffic transferred over network.
+This technique might help you to reduce the amount of traffic transferred over network and save CPU resources by preventing unnecessary decompression.

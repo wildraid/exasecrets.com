@@ -33,7 +33,8 @@ cat users.csv | ./exajload \
 -u 'SYS' \
 -P 'exasol' \
 -s 'EXASECRETS' \
--sql 'IMPORT INTO users FROM LOCAL CSV FILE '\''/dev/stdin'\'' ROW SEPARATOR = '\''LF'\''
+-presql 'TRUNCATE TABLE users' \
+-sql 'IMPORT INTO users FROM LOCAL CSV FILE '\''/dev/stdin'\'' ROW SEPARATOR = '\''LF'\'''
 ```
 
 You may use `/dev/stdin` special value to read from `STDIN` instead of normal file.
@@ -53,12 +54,13 @@ Now you have a pseudo-file called `stdin.gz`, which can be used as valid FILE va
 Let's try to compress data file on the fly and IMPORT it such state:
 
 ```
-gzip users.csv | | ./exajload \
+gzip -c users.csv | ./exajload \
 -c 'localhost:8563' \
 -u 'SYS' \
 -P 'exasol' \
 -s 'EXASECRETS' \
--sql 'IMPORT INTO users FROM LOCAL CSV FILE '\''stdin.gz'\'' ROW SEPARATOR = '\''LF'\''
+-presql 'TRUNCATE TABLE users' \
+-sql 'IMPORT INTO users FROM LOCAL CSV FILE '\''stdin.gz'\'' ROW SEPARATOR = '\''LF'\'''
 ```
 
 This technique might help you to reduce the amount of traffic transferred over network.

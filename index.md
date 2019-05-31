@@ -8,9 +8,9 @@ layout: home
 
 #### ExaJLoad
 
-* How to import data from pipe using ExaJLoad?
-* How to enable compression and disable encryption with ExaJLoad?
-* How to execute multiple SQL statements with ExaJLoad in single transaction?
+* [How to import data from pipe using exajload?](/2019/05/31/exajload-pipe.html)
+* How to execute multiple SQL statements in single transaction using exajload?
+* How to disable encryption for exajload?
 
 #### Query performance
 

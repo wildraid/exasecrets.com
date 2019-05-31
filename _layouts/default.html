@@ -72,7 +72,9 @@
       {% endif %}
       <!-- End: Post tagline -->
 
-      <a href="http://eepurl.com/gsKpwz" class="btn" target="_blank">Subscribe for updates</a>
+      {% if page.layout == 'home' %}
+        <a href="http://eepurl.com/gsKpwz" class="btn" target="_blank">Subscribe for updates</a>
+      {% endif %}
 
     </section>
 

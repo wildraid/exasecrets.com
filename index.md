@@ -20,7 +20,7 @@ layout: home
 
 #### UDF scripts
 
-* How to choose the right scripting language for your task?
+* <span tooltip="Coming soon!">How to choose the right scripting language for your task?</span>
 * How to control UDF parallelism?
 * UDF and memory considerations
 * UDF logging and error handling

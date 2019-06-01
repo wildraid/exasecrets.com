@@ -9,7 +9,7 @@ layout: home
 #### ExaJLoad
 
 * [How to import data from pipe using exajload?](/2019/05/31/exajload-pipe.html)
-* How to execute multiple SQL statements in single transaction using exajload?
+* [How to execute multiple SQL statements in single transaction using exajload?](/2019/06/01/exajload-autocommit.html)
 * How to disable encryption for exajload?
 
 #### Query performance

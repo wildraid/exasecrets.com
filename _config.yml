@@ -26,6 +26,8 @@ header_pages:
   - updates.md
   - about.md
 
+google_analytics: UA-142190441-1
+
 # gems:
 #  - jekyll-seo-tag
 

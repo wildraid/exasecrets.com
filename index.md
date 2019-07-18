@@ -10,7 +10,7 @@ layout: home
 
 * [How to import data from pipe using exajload?](/2019/05/31/exajload-pipe.html)
 * [How to execute multiple SQL statements in single transaction using exajload?](/2019/06/01/exajload-autocommit.html)
-* <span tooltip="Coming soon!">How to disable encryption for exajload?</span>
+* [How to disable encryption and improve performance of exajload?](/2019/07/18/exajload-encryption.html)
 
 #### PyEXASOL
 
